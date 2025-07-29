@@ -1,1 +1,3 @@
-from .main import hello
+from .core import FinancialDataManager
+
+__all__ = ['FinancialDataManager']
