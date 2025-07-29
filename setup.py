@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='kapfinance',
-    version='0.1.0', # Start with 0.1.0 and increment for future releases
+    version='0.1.2', # Start with 0.1.0 and increment for future releases
     author='Mert Kurtçu', # Replace with your name
     author_email='mertkurtcu.official@gmail.com.com', # Replace with your email
     description='A Python class for managing financial statement data from HTML-based XLS files.',
