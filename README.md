@@ -21,16 +21,16 @@ KAP üzerinden indirilen dosyalar aşağıdaki gibi organize edilmelidir:
 
 ```
 FinancialTable/
-├── 2020_01/
-│   ├── AKBNK.xls
-│   ├── GARAN.xls
-├── 2020_02/
-│   ├── AKBNK.xls
-│   └── GARAN.xls
+├── FinancialTable_2024_4
+│   ├── AKBNK_1386664_2024_4
+│   ├── SAHOL_1398985_2024_4
+├── FinancialTable_2025_1
+│   ├── AKBNK_1429676_2025_1
+│   └── SAHOL_1434981_2025_1
 ...
 ```
 
-Her alt klasör bir dönemi temsil etmeli (`YYYY_QQ` formatında), ve `.xls` dosyalarının isimlerinin ilk 5 karakteri ilgili şirketin **ticker** (hisse kodu) olmalıdır (örn. `AKBNK.xls`).
+KAP'tan indirilen dosyalar yukarıdaki formatta tekrar düzenlenmeli.
 
 ---
 
