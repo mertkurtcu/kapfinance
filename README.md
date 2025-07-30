@@ -1,28 +1,122 @@
-# Financial Data Manager
 
-[![PyPI version](https://badge.fury.io/py/kapfinance.svg)](https://pypi.org/project/kapfinance/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# 📊 kapfinance - Finansal Veri Yöneticisi
 
-This Python class, `kapfinance`, is designed to read, process, and manage financial `.xls` files (which contain HTML content) located within a specified root folder and its subfolders. It's particularly useful for extracting financial statement data on a **ticker-by-ticker basis**, implementing a **lazy loading** mechanism for efficient memory usage.
+`kapfinance`, Türkiye'deki şirketlerin Kamuyu Aydınlatma Platformu (KAP) üzerinden indirilen `.xls` (HTML tabanlı) finansal tablo dosyalarını kolayca okuyup analiz edebilmeniz için geliştirilmiş bir Python kütüphanesidir.
 
----
-
-## Features
-
-* **Automated File Mapping**: Scans a given directory to build a comprehensive map of all available financial statement files, identifying tickers and reporting periods.
-* **HTML Content Processing**: Reads `.xls` files (often used for financial reports that are essentially HTML tables), extracts relevant financial account descriptions and their corresponding values.
-* **Lazy Loading**: Data for a specific ticker is only loaded into memory when explicitly requested, optimizing memory usage for large datasets.
-* **Time-Series Data Retrieval**: Provides a convenient method to retrieve financial data as a **pandas DataFrame**, with account descriptions as rows and reporting periods as columns, sorted chronologically.
-* **Period Filtering**: Allows users to filter financial data by specifying a start and end reporting period (in `'YYYY_QQ'` format, e.g., `'2020_01'`, `'2022_04'`).
-* **Robust Error Handling**: Includes logging for various scenarios, such as missing folders, file processing errors, and unavailable data.
+> Bu araç, finansal tablo klasörlerinizi tarar, dosyaları periyot bazında düzenler ve istediğiniz şirketin dönemsel finansal verilerini hızlıca bir `pandas.DataFrame` yapısı olarak sunar.
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-To use this class, you'll need the following Python libraries installed:
+## 🚀 Kurulum
 
 ```bash
-pip install pandas numpy lxml openpyxl
+pip install kapfinance
+```
+
+---
+
+## 📂 Klasör Yapısı Beklentisi
+
+KAP üzerinden indirilen dosyalar aşağıdaki gibi organize edilmelidir:
+
+```
+FinancialTable/
+├── 2020_01/
+│   ├── AKBNK.xls
+│   ├── GARAN.xls
+├── 2020_02/
+│   ├── AKBNK.xls
+│   └── GARAN.xls
+...
+```
+
+Her alt klasör bir dönemi temsil etmeli (`YYYY_QQ` formatında), ve `.xls` dosyalarının isimlerinin ilk 5 karakteri ilgili şirketin **ticker** (hisse kodu) olmalıdır (örn. `AKBNK.xls`).
+
+---
+
+## 🧠 Temel Kullanım
+
+```python
+from kapfinance import FinancialDataManager
+
+# 1. Verinin bulunduğu kök klasör yolunu belirtin
+data_path = "C:/Users/kullanici_adi/Downloads/FinancialTable/"
+
+# 2. Veri yöneticisini başlatın
+kap = FinancialDataManager(data_path)
+
+# 3. Mevcut tüm şirketleri listeleyin
+print(kap.list_available_tickers())
+
+# 4. Belirli bir şirketin tüm verisini yükleyin
+df_akbnk = kap.download("AKBNK")
+print(df_akbnk.head())
+
+# 5. Belirli tarih aralığına göre filtreleme
+df_garan = kap.download("GARAN", start="2020_01", end="2022_04")
+print(df_garan.head())
+```
+
+---
+
+## 📐 DataFrame Yapısı
+
+`download()` fonksiyonu şu yapıda bir `pandas.DataFrame` döner:
+
+| Description               | 2020_01 | 2020_02 | ... |
+|---------------------------|---------|---------|-----|
+| Hasılat                   | 1234    | 1300    | ... |
+| Net Dönem Kar/Zararı      | 456     | 500     | ... |
+| Öz Kaynaklar              | 789     | 810     | ... |
+
+- **Satırlar:** Hesap kalemleri  
+- **Sütunlar:** Finansal dönemler  
+- **Değerler:** Sayısal büyüklükler (otomatik olarak `float`'a dönüştürülür)
+
+---
+
+## ⚠️ Önemli Notlar
+
+- `.xls` dosyaları aslında HTML tabanlıdır ve `pandas.read_html()` ile işlenmektedir.
+- Sayısal değerlerde Türkçe format desteği mevcuttur (örn. `1.234.567,89` → `1234567.89`)
+- Eğer bir dosyada hata oluşursa veya okunamıyorsa, uyarı logu yazılır ancak program çalışmaya devam eder.
+
+---
+
+## 🛠 Geliştirici Notları
+
+### Dosya Yapısı
+
+- `kapfinance/`
+  - `__init__.py`
+  - `kapfinance.py`
+- `setup.py`
+- `README.md`
+- `LICENSE`
+
+---
+
+## ✅ Yapılacaklar
+
+- [ ] `matplotlib` desteği ile otomatik grafikleme
+- [ ] Daha sağlam dosya formatı kontrolleri
+- [ ] Türkçe/İngilizce çoklu dil desteği
+- [ ] Finansal oran hesaplamaları (F/K, PD/DD vb.) için yardımcı sınıflar
+
+---
+
+## 📄 Lisans
+
+MIT License. Detaylar için [LICENSE](./LICENSE) dosyasına bakabilirsiniz.
+
+---
+
+## 👨‍💻 Katkıda Bulun
+
+Pull request’ler ve sorun bildirimi (issue) açmak serbesttir. İyileştirme önerilerinizi memnuniyetle karşılarız!
+
+---
+
+## 📬 İletişim
+
+Herhangi bir sorunuz varsa GitHub üzerinden issue açabilir veya doğrudan iletişime geçebilirsiniz.
