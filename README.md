@@ -4,7 +4,7 @@ KAP’tan indirilen finansal tablo .xls dosyalarını otomatik okuma, ayrıştı
 
 Desteklenen rapor türleri:
 
-Bilanço (Finansal Durum Tablosu)
+Bilanço
 
 Kar veya Zarar Tablosu
 
