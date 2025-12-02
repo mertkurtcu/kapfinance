@@ -55,6 +55,8 @@ print(df)
 
 df = kap.get_income_statement("THYAO")
 
+df = kap.get_comprehensive_income_statement("THYAO")
+
 📌 4) Belirli Dönem Aralığı
 
 df = kap.get_income_statement("THYAO", start="2016_01", end="2020_04")
