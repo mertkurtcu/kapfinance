@@ -22,6 +22,7 @@ pip install kapfinance
 import kapfinance as kf
 
 data_path = r"C:\Data\FinancialTables"
+
 kap = kf.FinancialDataManager(data_path)
 
 📂 Klasör Yapısı
