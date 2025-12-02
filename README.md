@@ -19,6 +19,7 @@ PyPI üzerinden yükleyebilirsiniz:
 pip install kapfinance
 
 🔧 Hızlı Başlangıç
+
 import kapfinance as kf
 
 data_path = r"C:\Data\FinancialTables"
