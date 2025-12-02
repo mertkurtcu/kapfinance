@@ -48,6 +48,7 @@ kap.list_available_tickers()
 📌 2) Bilanço Çekme
 
 df = kap.get_balance_sheet("ASELS")
+
 print(df)
 
 📌 3) Gelir Tablosu Çekme
