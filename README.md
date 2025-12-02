@@ -27,14 +27,7 @@ Bu araç, klasördeki tüm .xls dosyalarını tarar, dosya adlarından **şirket
 
 ## 📂 Klasör Yapısı
 
-FinancialTables
-├── FinancialTables_2016
-│ ├── FinancialTable_2016_1
-│ │ ├── ACSEL_551647_2016_1.xls
-│ │ ├── ADEL_551614_2016_1.xls
-│ │ └── ...
-│ ├── FinancialTable_2016_2
-│ │ ├── ARCLK_548773_2016_2.xls
-│ │ ├── ASELS_553417_2016_2.xls
-│ │ └── ...
-│ └── ...
+`FinancialTables/` klasörü altındaki **tüm .xls dosyaları**, klasör sayısı ve derinliği fark etmeksizin otomatik olarak taranır.
+
+Örn:  
+FinancialTables/…/FinancialTable_2016_2/ASELS_553417_2016_2.xls
