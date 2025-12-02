@@ -67,3 +67,14 @@ Pivotlanmış DataFrame çıktısı:
 
 ## 📂 Proje Yapısı
 
+## 🚀 Kullanım (Usage)
+
+### 📌 1. Veri klasörünüzü hazırlayın
+
+FinancialDataManager, KAP’tan indirdiğiniz `.xls` dosyalarının bulunduğu **ana klasörü** ister.  
+Bu klasör içinde her şirkete ait raporlar bulunabilir.
+
+Örnek klasör yapısı:
+
+
+
