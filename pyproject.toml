@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kapfinance"
+version = "1.1.10"
+description = "KAP .xls finansal tablo dosyalarını okuyup DataFrame'e çeviren Python kütüphanesi."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Mert Kurtçu", email = "mertkurtcu.official@gmail.com"},
+]
+keywords = ["KAP", "BIST", "finance", "financial statements", "Turkey"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "lxml>=4.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/mertkurtcu/kap-finance"
+Source = "https://github.com/mertkurtcu/kap-finance"
+Issues = "https://github.com/mertkurtcu/kap-finance/issues"
