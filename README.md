@@ -31,3 +31,20 @@ Bu araç, klasördeki tüm .xls dosyalarını tarar, dosya adlarından **şirket
 
 Örn:  
 FinancialTables/FinancialTables_2025/FinancialTable_2025_1/THYAO_1430405_2025_1.xls
+
+🧠 Kullanım Örneği
+data_path = "C:/MERT/FinancialTables/"
+kapfinance = FinancialDataManager(data_path)
+
+✔ Mevcut ticker’ları listele
+kapfinance.list_available_tickers()
+
+✔ Bilanço çekme
+df = kapfinance.get_balance_sheet("ASELS")
+print(df)
+
+✔ Gelir tablosu çekme (belirli dönem aralığı)
+df = kapfinance.get_income_statement("THYAO", start="2020_03", end="2023_12")
+
+✔ Nakit akış tablosu
+kapfinance.get_cash_flow("ASELS")
