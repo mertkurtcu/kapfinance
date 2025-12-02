@@ -4,11 +4,11 @@ Kamuyu Aydınlatma Platformu’ndan (KAP) indirilen finansal tablo dosyalarını
 
 Desteklenen rapor türleri:
 
-Bilanço
+Bilanço (Finansal Durum Tablosu)
 
 Kar veya Zarar Tablosu
 
-Diğer Kapsamlı Gelir Tablosu
+Kapsamlı Gelir Tablosu
 
 Nakit Akış Tablosu
 
