@@ -29,3 +29,13 @@ Tabloları ayıklayıp Period x Item formatında pivot DataFrame’lere dönüş
 Bilanço, gelir tablosu, nakit akış tablosu için ayrı yükleyiciler
 
 Her şirket için tüm dönemleri tek DataFrame’de zaman serisi formatında döker
+
+📂 Klasör Yapısı
+FinancialTables/
+ ├── ASELS_2023_12_Bilanco.xls
+ ├── ASELS_2023_12_Gelir.xls
+ ├── THYAO_2022_06.xls
+ ├── ... diğer .xls dosyaları
+
+
+Önemli: Dosya adındaki ticker, ilk _ karakterine kadar olan bölüm olarak alınır.
