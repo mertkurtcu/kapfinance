@@ -30,4 +30,4 @@ Bu araç, klasördeki tüm .xls dosyalarını tarar, dosya adlarından **şirket
 `FinancialTables/` klasörü altındaki **tüm .xls dosyaları**, klasör sayısı ve derinliği fark etmeksizin otomatik olarak taranır.
 
 Örn:  
-FinancialTables/…/FinancialTable_2016_2/ASELS_553417_2016_2.xls
+FinancialTables/FinancialTables_2025/FinancialTable_2025_1/THYAO_1430405_2025_1.xls
