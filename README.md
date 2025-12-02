@@ -27,19 +27,14 @@ Bu araç, klasördeki tüm .xls dosyalarını tarar, dosya adlarından **şirket
 
 ## 📂 Klasör Yapısı
 
-C:\Data\FinancialTables
+FinancialTables
 ├── FinancialTables_2016
 │ ├── FinancialTable_2016_1
-│ │ ├── ASELS_2016_1_Bilanco.xls
-│ │ ├── ASELS_2016_1_Gelir.xls
+│ │ ├── ACSEL_551647_2016_1.xls
+│ │ ├── ADEL_551614_2016_1.xls
 │ │ └── ...
 │ ├── FinancialTable_2016_2
-│ │ ├── ASELS_2016_2_Bilanco.xls
-│ │ ├── ASELS_2016_2_Gelir.xls
+│ │ ├── ARCLK_548773_2016_2.xls
+│ │ ├── ASELS_553417_2016_2.xls
 │ │ └── ...
 │ └── ...
-├── FinancialTables_2017
-│ ├── FinancialTable_2017_1
-│ ├── FinancialTable_2017_2
-│ └── ...
-└── ...
