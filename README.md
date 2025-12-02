@@ -58,7 +58,7 @@ df = kap.get_comprehensive_income_statement("THYAO")
 
 📌 4) Belirli Dönem Aralığı
 
-df = kap.get_income_statement("THYAO", start="2016_01", end="2020_04")
+df = kap.get_comprehensive_income_statement("THYAO", start="2020_01", end="2025_04")
 
 📌 5) Nakit Akış Tablosu
 
