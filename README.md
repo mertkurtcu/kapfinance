@@ -1,10 +1,10 @@
 📊 kapfinance — FinancialDataManager
 
-KAP’tan indirilen .xls finansal tabloları otomatik okuma, ayıklama ve dönemlendirme aracı
+KAP’tan indirilen finansal tablo .xls dosyalarını otomatik okuma, ayrıştırma ve zaman serilerine dönüştürme aracı
 
-kapfinance, Kamuyu Aydınlatma Platformu'ndan (KAP) indirilen finansal tablo .xls dosyalarını otomatik olarak tarayan, işleyen, ölçeklendiren ve zaman serisi DataFrame’lerine dönüştüren bir Python paketidir.
+kapfinance, Kamuyu Aydınlatma Platformu’ndan (KAP) indirilen finansal tablo dosyalarını otomatik olarak tarayan, işleyen, ölçeklendiren ve pandas DataFrame formatında zaman serilerine dönüştüren bir Python paketidir.
 
-Desteklenen tablolar:
+Desteklenen rapor türleri:
 
 Bilanço (Finansal Durum Tablosu)
 
@@ -15,13 +15,12 @@ Diğer Kapsamlı Gelir Tablosu
 Nakit Akış Tablosu
 
 🚀 Kurulum
-PyPI üzerinden yükleme:
+
+PyPI üzerinden yükleyebilirsiniz:
 
 pip install kapfinance
 
-
-🔧 Kullanıma Başlangıç
-
+🔧 Hızlı Başlangıç
 import kapfinance as kf
 
 data_path = r"C:\Data\FinancialTables"
@@ -29,11 +28,15 @@ kap = kf.FinancialDataManager(data_path)
 
 📂 Klasör Yapısı
 
-kapfinance, verdiğiniz klasör altında bulunan tüm alt dizinleri otomatik olarak tarar.
-Alt klasör sayısı, isimleri veya derinliği önemli değildir.
+kapfinance, verdiğiniz dizin altında yer alan tüm alt klasörleri otomatik olarak tarar.
+Alt dizinlerin sayısı, isimlendirme şekli veya klasör derinliği önemli değildir.
 
-Örnek:
-FinancialTables/FinancialTables_2025/FinancialTable_2025_1/THYAO_1430405_2025_1.xls
+Örnek klasör yapısı:
+
+FinancialTables/
+    FinancialTables_2025/
+        FinancialTable_2025_1/
+            THYAO_1430405_2025_1.xls
 
 🧠 Kullanım Örnekleri
 📌 1) Mevcut Ticker’ları Listeleme
