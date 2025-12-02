@@ -1,16 +1,14 @@
-## 📂 Örnek Dosya Yapısı
-
-FinancialTables/
-├── ASELS_2023_12.xls
-├── ASELS_2024_03.xls
-├── THYAO_2022_06.xls
-├── KCHOL_2021_12.xls
-└── SISE_2020_03.xls
-
-Copy code
-
-
-
-
-
-
+C:\Data\FinancialTables\
+    ├── FinancialTables_2016\
+    │     └── FinancialTable_2016_2\
+    │            ├── BalanceSheet.xls
+    │            ├── IncomeStatement.xls
+    │            └── CashFlow.xls
+    │
+    ├── FinancialTables_2017\
+    │     └── FinancialTable_2017_1\
+    │            ├── BalanceSheet.xls
+    │            ├── IncomeStatement.xls
+    │            └── CashFlow.xls
+    │
+    └── ...
