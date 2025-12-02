@@ -1,8 +1,6 @@
 📊 kapfinance — FinancialDataManager
 
-KAP’tan indirilen finansal tablo .xls dosyalarını otomatik okuma, ayrıştırma ve zaman serilerine dönüştürme aracı
-
-kapfinance, Kamuyu Aydınlatma Platformu’ndan (KAP) indirilen finansal tablo dosyalarını otomatik olarak tarayan, işleyen, ölçeklendiren ve pandas DataFrame formatında zaman serilerine dönüştüren bir Python paketidir.
+KAP’tan indirilen finansal tablo .xls dosyalarını otomatik okuma, ayrıştırma ve zaman serilerine dönüştürme aracı kapfinance, Kamuyu Aydınlatma Platformu’ndan (KAP) indirilen finansal tablo dosyalarını otomatik olarak tarayan, işleyen, ölçeklendiren ve pandas DataFrame formatında zaman serilerine dönüştüren bir Python paketidir.
 
 Desteklenen rapor türleri:
 
@@ -38,7 +36,9 @@ FinancialTables/
         FinancialTable_2025_1/
             THYAO_1430405_2025_1.xls
 
+
 🧠 Kullanım Örnekleri
+
 📌 1) Mevcut Ticker’ları Listeleme
 kap.list_available_tickers()
 
