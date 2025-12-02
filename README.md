@@ -27,8 +27,19 @@ Bu araç, klasördeki tüm .xls dosyalarını tarar, dosya adlarından **şirket
 
 ## 📂 Klasör Yapısı
 
-FinancialTables/
-├── ASELS_2023_12_Bilanco.xls
-├── ASELS_2023_12_Gelir.xls
-├── THYAO_2022_06.xls
-├── ... diğer .xls dosyaları
+C:\Data\FinancialTables
+├── FinancialTables_2016
+│ ├── FinancialTable_2016_1
+│ │ ├── ASELS_2016_1_Bilanco.xls
+│ │ ├── ASELS_2016_1_Gelir.xls
+│ │ └── ...
+│ ├── FinancialTable_2016_2
+│ │ ├── ASELS_2016_2_Bilanco.xls
+│ │ ├── ASELS_2016_2_Gelir.xls
+│ │ └── ...
+│ └── ...
+├── FinancialTables_2017
+│ ├── FinancialTable_2017_1
+│ ├── FinancialTable_2017_2
+│ └── ...
+└── ...
