@@ -41,17 +41,22 @@ FinancialTables/
 🧠 Kullanım Örnekleri
 
 📌 1) Mevcut Ticker’ları Listeleme
+
 kap.list_available_tickers()
 
 📌 2) Bilanço Çekme
+
 df = kap.get_balance_sheet("ASELS")
 print(df)
 
 📌 3) Gelir Tablosu Çekme
+
 df = kap.get_income_statement("THYAO")
 
 📌 4) Belirli Dönem Aralığı
+
 df = kap.get_income_statement("THYAO", start="2016_01", end="2020_04")
 
 📌 5) Nakit Akış Tablosu
+
 df = kap.get_cash_flow("ASELS")
